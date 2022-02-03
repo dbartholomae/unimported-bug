@@ -1,0 +1,31 @@
+on: workflow_dispatch
+
+jobs:
+  onWindows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+          cache: 'npm'
+      - name: Install Packages
+        run: npm install --prefer-offline --no-audit
+      - name: Unimported
+        run: npx unimported
+  onLinux:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+          cache: 'npm'
+      - name: Install Packages
+        run: npm install --prefer-offline --no-audit
+      - name: Unimported
+        run: npx unimported
