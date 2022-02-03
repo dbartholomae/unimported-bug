@@ -1,0 +1,23 @@
+{
+  "entry": [
+    "src/App.test.tsx",
+    "src/index.tsx"
+  ],
+  "ignorePatterns": [
+    "**/node_modules/**",
+    "**/*.d.ts"
+  ],
+  "ignoreUnimported": [
+    "src/setupTests.ts"
+  ],
+  "ignoreUnused": [
+    "@testing-library/jest-dom",
+    "@testing-library/user-event",
+    "@types/jest",
+    "@types/node",
+    "@types/react",
+    "@types/react-dom",
+    "react-scripts"
+  ],
+  "ignoreUnresolved": []
+}
